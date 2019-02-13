@@ -28,8 +28,11 @@
     <div v-if="ok">v-if条件による描画</div>
     <div v-show="ok">v-show条件による表示</div>
     <ul>
-      <li v-for="(item, index) in list2" v-bind:key="item.id">
+      <li v-for="(item, index) in list2"
+          v-bind:key="item.id"
+          v-bind:class="{ tuyoi: item.hp > 300 }">
         ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+        <span v-if="item.hp > 300">つよい！ </span>
       </li>
     </ul>
   </div>
