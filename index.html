@@ -17,6 +17,8 @@
     <transition>
       <p v-if="show">Hello Vue.js!</p>
     </transition>
+    <p>{{ count }}回クリックしたよ！</p>
+    <button v-on:click="increment">カウントを増やす</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="main.js"></script>

@@ -3,11 +3,15 @@ var app = new Vue({
   data: {
     message: '初期メッセージ',
     list: ['りんご', 'ばなな', 'いちご'],
-    show: true
+    show: true,
+    count: 0
   },
   methods: {
     handleClick: function(event) {
       alert(event.target)
+    },
+    increment: function() {
+      this.count += 1
     }
   }
 })
