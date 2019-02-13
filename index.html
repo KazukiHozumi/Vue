@@ -7,7 +7,10 @@
 </head>
 <body>
   <div id="app">
-
+    <p>{{ message }}</p>
+    <ol>
+      <li v-for="item in list">{{ item }}</li>
+    </ol>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="main.js"></script>
