@@ -13,7 +13,8 @@ var app = new Vue({
       color: 'red',
       backgroundColor: 'lightgray'
     },
-    radius: 50
+    radius: 50,
+    ok: false
   },
   methods: {
     handleClick: function(event) {
