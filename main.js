@@ -27,6 +27,9 @@ var app = new Vue({
     },
     increment: function() {
       this.count += 1
+    },
+    listPush() {
+      this.list.push('めろん')
     }
   }
 })
