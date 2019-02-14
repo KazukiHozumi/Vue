@@ -22,7 +22,8 @@ var app = new Vue({
     ],
     name: "キマイラ",
     id: "1",
-    id_2: "1"
+    id_2: "1",
+    text: "Vue"
   },
   methods: {
     handleClick: function(event) {
