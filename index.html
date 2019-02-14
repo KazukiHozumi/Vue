@@ -50,6 +50,12 @@
         ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
       </li>
     </ul>
+    <a v-bind:href="url" v-pre>
+      Hello {{ message }}
+    </a><br>
+    <a v-bind:href="url" v-once>
+      Hello {{ message }}
+    </a><br>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
