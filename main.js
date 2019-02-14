@@ -52,6 +52,9 @@ var app = new Vue({
     },
     doChangeKS: function() {
       this.$set(this.list2, this.id_2-1, {id: this.id_2, name: 'キングスライム', hp: 700})
+    },
+    doAttack: function(index) {
+      this.list2[index].hp -= 10
     }
   }
 })
