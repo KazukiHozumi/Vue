@@ -21,7 +21,8 @@ var app = new Vue({
       { id: 3, name: 'ドラゴン', hp: 500 }
     ],
     name: "キマイラ",
-    id: "1"
+    id: "1",
+    id_2: "1"
   },
   methods: {
     handleClick: function(event) {
@@ -46,8 +47,11 @@ var app = new Vue({
     doRemove: function(index) {
       this.list2.splice(index, 1)
     },
-    doChange: function() {
+    doChangeS: function() {
       this.$set(this.list2, this.id-1, {id: this.id, name: 'スライム', hp: 100})
+    },
+    doChangeKS: function() {
+      this.$set(this.list2, this.id_2-1, {id: this.id_2, name: 'キングスライム', hp: 700})
     }
   }
 })
