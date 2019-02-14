@@ -41,7 +41,9 @@
     ID<input v-model="id">
     <button v-on:click="doChangeS()">スライム化</button><br>
     ID<input v-model="id_2">
-    <button v-on:click="doChangeKS()">キングスライム化</button>
+    <button v-on:click="doChangeKS()">キングスライム化</button><br>
+    <span v-for="item in 10">{{ item }} </span><br>
+    <span v-for="item in [1, 3, 6, 9, 12]">{{ item }} </span>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="main.js"></script>
