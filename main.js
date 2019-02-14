@@ -23,7 +23,15 @@ var app = new Vue({
     name: "キマイラ",
     id: "1",
     id_2: "1",
-    text: "Vue"
+    text: "Vue",
+    list3: []
+  },
+  created: function() {
+    axios.get('list.json').then(function(response) {
+      this.list3 = response.data
+    }.bind(this)).catch(function(e) {
+      console.error(e)
+    })
   },
   methods: {
     handleClick: function(event) {
