@@ -19,7 +19,8 @@ var app = new Vue({
       { id: 1, name: 'スライム', hp: 100 },
       { id: 2, name: 'ゴブリン', hp: 200 },
       { id: 3, name: 'ドラゴン', hp: 500 }
-    ]
+    ],
+    name: "キマイラ"
   },
   methods: {
     handleClick: function(event) {
@@ -30,6 +31,16 @@ var app = new Vue({
     },
     listPush() {
       this.list.push('めろん')
+    },
+    doAdd: function() {
+      var max = this.list2.reduce(function(a, b) {
+        return a.id > b.id ? a.id : b.id
+      }, 0)
+      this.list2.push({
+        id: max + 1,
+        name: this.name,
+        hp: 500
+      })
     }
   }
 })
