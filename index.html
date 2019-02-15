@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Vue.js App</title>
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 <body>
   <div id="app">
@@ -59,13 +60,24 @@
     <span v-text="message"></span><br>
     <span v-html="message_2"></span><br>
     <button v-on:click="count++">クリック</button><br>
-    <img src="image.png" v-on:load="show_2=true" v-bind:class="{hide: !show}"><br>
-    <div v-on:mousewheel="count++">
-      コンテンツ
-    </div>
+    <!-- <img src="image.png" v-on:load="show_2=true" v-bind:class="{hide: !show}"><br> -->
+    <!-- <input v-bind:value="message" v-on:input="handleInput"> -->
+    <el-upload
+      class="upload-demo"
+      drag
+      action="https://jsonplaceholder.typicode.com/posts/"
+      :on-preview="handlePreview"
+      :on-remove="handleRemove"
+      :file-list="fileList"
+      multiple>
+      <i class="el-icon-upload"></i>
+      <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
+      <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
+    </el-upload>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
