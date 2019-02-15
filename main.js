@@ -27,7 +27,8 @@ var app = new Vue({
     list3: [],
     url: "https://www.google.com",
     message_2: 'Hello <strong>Vue.js!</strong>',
-    show_2: true
+    show_2: true,
+    fileList: []
   },
   created: function() {
     axios.get('list.json').then(function(response) {
