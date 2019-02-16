@@ -64,6 +64,9 @@ var app = new Vue({
         x: this.halfWidth,
         y: this.halfHeight
       }
+    },
+    computedData: function() {
+      return Math.random()
     }
   },
   created: function() {
@@ -138,6 +141,9 @@ var app = new Vue({
     },
     scrollTop: function() {
       scroll.animateScroll(0)
+    },
+    methodsData: function() {
+      return Math.random()
     }
   }
 })

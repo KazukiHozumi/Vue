@@ -139,7 +139,15 @@
     <p>X: {{ halfPoint.x }}</p>
     <p>Y: {{ halfPoint.y }}</p>
     <input v-model.number="width"> {{ width }}<br>
-    <input v-model.number="halfWidth"> {{ halfWidth }}
+    <input v-model.number="halfWidth"> {{ halfWidth }}<br>
+    <ol>
+      <li>{{ computedData }}</li>
+      <li>{{ computedData }}</li>
+    </ol>
+    <ol>
+      <li>{{ methodsData() }}</li>
+      <li>{{ methodsData() }}</li>
+    </ol>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
