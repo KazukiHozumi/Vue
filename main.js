@@ -31,7 +31,8 @@ var app = new Vue({
     fileList: [],
     val: true,
     val_2: 'yes',
-    val_3: []
+    val_3: ['A', 'C'],
+    val_4: 'a'
   },
   created: function() {
     axios.get('list.json').then(function(response) {
