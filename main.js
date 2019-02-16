@@ -28,7 +28,7 @@ var app = new Vue({
     url: "https://www.google.com",
     message_2: 'Hello <strong>Vue.js!</strong>',
     show_2: true,
-    fileList: []
+    fileList: [],
   },
   created: function() {
     axios.get('list.json').then(function(response) {
@@ -68,6 +68,15 @@ var app = new Vue({
     },
     doAttack: function(index) {
       this.list2[index].hp -= 10
+    },
+    handleRemove: function(file, fileList) {
+      console.log(file, fileList);
+    },
+    handlePreview: function(file) {
+      console.log(file);
+    },
+    handleAdd: function (file, fileList) {
+      this.fileList = fileList
     }
   }
 })

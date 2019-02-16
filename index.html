@@ -63,16 +63,19 @@
     <!-- <img src="image.png" v-on:load="show_2=true" v-bind:class="{hide: !show}"><br> -->
     <!-- <input v-bind:value="message" v-on:input="handleInput"> -->
     <el-upload
-    class="upload-demo"
-    drag
-    action="https://jsonplaceholder.typicode.com/posts/"
-    :on-preview="handlePreview"
-    :on-remove="handleRemove"
-    :file-list="fileList"
-    multiple>
-    <i class="el-icon-upload"></i>
-    <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
-    <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
+      class="upload-demo"
+      drag
+      action=""
+      :on-preview="handlePreview"
+      :on-change="handleAdd"
+      :on-remove="handleRemove"
+      :file-list="fileList"
+      v-bind:auto-upload="false"
+      list-type="picture"
+      multiple>
+      <i class="el-icon-upload"></i>
+      <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
+      <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
     </el-upload>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
