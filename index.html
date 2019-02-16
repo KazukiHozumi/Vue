@@ -102,7 +102,11 @@
     <label>
       <input type="checkbox" v-model="val"> {{ val }}
     </label><br>
-    <input type="checkbox" v-model="val_2" true-value="yes" false-value="no"> {{ val_2 }}
+    <input type="checkbox" v-model="val_2" true-value="yes" false-value="no"> {{ val_2 }}<br>
+    <label><input type="checkbox" v-model="val_3" value="A"> A</label>
+    <label><input type="checkbox" v-model="val_3" value="B"> B</label>
+    <label><input type="checkbox" v-model="val_3" value="C"> C</label>
+    <p>{{ val_3 }}</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>

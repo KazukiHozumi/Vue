@@ -30,7 +30,8 @@ var app = new Vue({
     show_2: true,
     fileList: [],
     val: true,
-    val_2: 'yes'
+    val_2: 'yes',
+    val_3: []
   },
   created: function() {
     axios.get('list.json').then(function(response) {
