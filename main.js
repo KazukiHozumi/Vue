@@ -32,7 +32,8 @@ var app = new Vue({
     val: true,
     val_2: 'yes',
     val_3: ['A', 'C'],
-    val_4: 'a'
+    val_4: 'a',
+    val_5: ''
   },
   created: function() {
     axios.get('list.json').then(function(response) {
