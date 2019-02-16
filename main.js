@@ -80,6 +80,11 @@ var app = new Vue({
   beforeDestroy: function() {
     window.removeEventListener('scroll', this.handleScroll)
   },
+  watch: {
+    message: _.debounce(function(newVal) {
+      console.log(newVal)
+    }, 500)
+  },
   methods: {
     handleClick: function(event) {
       alert(event.target)
