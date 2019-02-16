@@ -40,11 +40,25 @@ var app = new Vue({
     val_7: 50,
     val_8: '#ff0000',
     scrollY: 0,
-    timer: null
+    timer: null,
+    width: 800,
+    height: 600
   },
   computed: {
     halfRadius: function() {
       return this.radius/2
+    },
+    halfWidth: function() {
+      return this.width/2
+    },
+    halfHeight: function() {
+      return this.height/2
+    },
+    halfPoint: function() {
+      return {
+        x: this.halfWidth,
+        y: this.halfHeight
+      }
     }
   },
   created: function() {
