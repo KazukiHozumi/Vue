@@ -48,7 +48,8 @@ var app = new Vue({
     topics: [
       {value: 'vue', name: 'Vue.js' },
       {value: 'jQuery', name: 'jQuery'}
-    ]
+    ],
+    price: 12345
   },
   computed: {
     halfRadius: function() {
@@ -96,6 +97,11 @@ var app = new Vue({
       }).then(function(response) {
         this.list_2 = response.data.items
       }.bind(this))
+    }
+  },
+  filters: {
+    localeNum: function(val) {
+      return val.toLocaleString()
     }
   },
   methods: {
