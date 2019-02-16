@@ -29,6 +29,7 @@ var app = new Vue({
     message_2: 'Hello <strong>Vue.js!</strong>',
     show_2: true,
     fileList: [],
+    val: true
   },
   created: function() {
     axios.get('list.json').then(function(response) {

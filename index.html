@@ -98,7 +98,10 @@
     <input v-on:keydown.up.down.left.right="handler" value="初期メッセージ">
     <button v-on:click.shift="handler">シフトハンドラーボタン</button><br>
     <textarea v-model="message"></textarea>
-    <pre>{{ message }}</pre>
+    <pre>{{ message }}</pre><br>
+    <label>
+      <input type="checkbox" v-model="val"> {{ val }}
+    </label>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
