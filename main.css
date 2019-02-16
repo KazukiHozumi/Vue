@@ -14,3 +14,7 @@ img {
 img.hide {
   opacity: 0;
 }
+
+.compact {
+  font-size: 20px
+}

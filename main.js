@@ -1,3 +1,4 @@
+var scroll = new SmoothScroll()
 var app = new Vue({
   el: '#app',
   data: {
@@ -37,14 +38,20 @@ var app = new Vue({
     val_6: ['a', 'c'],
     preview: '',
     val_7: 50,
-    val_8: '#ff0000'
+    val_8: '#ff0000',
+    scrollY: 0,
+    timer: null
   },
   created: function() {
     axios.get('list.json').then(function(response) {
       this.list3 = response.data
     }.bind(this)).catch(function(e) {
       console.error(e)
-    })
+    }),
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy: function() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleClick: function(event) {
@@ -95,6 +102,18 @@ var app = new Vue({
       if (file && file.type.match(/^image\/(png|jpeg)$/)) {
         this.preview = window.URL.createObjectURL(file)
       }
+    },
+    handleScroll: function() {
+      if (this.timer === null) {
+        this.timer = setTimeout(function() {
+          this.scrollY = window.scrollY
+          clearTimeout(this.timer)
+          this.timer = null
+        }.bind(this), 200)
+      }
+    },
+    scrollTop: function() {
+      scroll.animateScroll(0)
     }
   }
 })
