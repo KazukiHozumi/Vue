@@ -42,7 +42,13 @@ var app = new Vue({
     scrollY: 0,
     timer: null,
     width: 800,
-    height: 600
+    height: 600,
+    list_2: [],
+    current: '',
+    topics: [
+      {value: 'vue', name: 'Vue.js' },
+      {value: 'jQuery', name: 'jQuery'}
+    ]
   },
   computed: {
     halfRadius: function() {
@@ -83,7 +89,14 @@ var app = new Vue({
   watch: {
     message: _.debounce(function(newVal) {
       console.log(newVal)
-    }, 500)
+    }, 500),
+    current: function(val) {
+      axios.get('https://api.github.com/search/repositories', {
+        params: {q: 'topic:' + val }
+      }).then(function(response) {
+        this.list_2 = response.data.items
+      }.bind(this))
+    }
   },
   methods: {
     handleClick: function(event) {
