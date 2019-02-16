@@ -77,6 +77,9 @@ var app = new Vue({
     },
     handleAdd: function (file, fileList) {
       this.fileList = fileList
+    },
+    handler: function(comment) {
+      console.log(comment)
     }
   }
 })

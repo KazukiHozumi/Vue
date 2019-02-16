@@ -77,6 +77,8 @@
       <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
       <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
     </el-upload>
+    <div v-on:click.right="handler">example</div>
+    <div v-on:click.right.prevent="handler">example</div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
