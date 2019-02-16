@@ -34,7 +34,8 @@ var app = new Vue({
     val_3: ['A', 'C'],
     val_4: 'a',
     val_5: '',
-    val_6: ['a', 'c']
+    val_6: ['a', 'c'],
+    preview: ''
   },
   created: function() {
     axios.get('list.json').then(function(response) {
@@ -86,6 +87,12 @@ var app = new Vue({
     },
     handler: function(comment) {
       console.log(comment)
+    },
+    handleChange: function(event) {
+      var file = event.target.files[0]
+      if (file && file.type.match(/^image\/(png|jpeg)$/)) {
+        this.preview = window.URL.createObjectURL(file)
+      }
     }
   }
 })
