@@ -42,6 +42,11 @@ var app = new Vue({
     scrollY: 0,
     timer: null
   },
+  computed: {
+    halfRadius: function() {
+      return this.radius/2
+    }
+  },
   created: function() {
     axios.get('list.json').then(function(response) {
       this.list3 = response.data
