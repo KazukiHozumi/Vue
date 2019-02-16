@@ -33,7 +33,8 @@ var app = new Vue({
     val_2: 'yes',
     val_3: ['A', 'C'],
     val_4: 'a',
-    val_5: ''
+    val_5: '',
+    val_6: ['a', 'c']
   },
   created: function() {
     axios.get('list.json').then(function(response) {
