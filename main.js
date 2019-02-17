@@ -1,7 +1,14 @@
 var scroll = new SmoothScroll()
 
 Vue.component('my-component', {
-  template: '<p>MyComponent</p>'
+  template: '<p>{{ val }}! {{ name }}!</p>',
+  props: {
+    'val': String,
+    'name': {
+      type: String,
+      required: true
+    }
+  }
 })
 
 var app = new Vue({
