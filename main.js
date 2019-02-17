@@ -49,7 +49,8 @@ var app = new Vue({
       {value: 'vue', name: 'Vue.js' },
       {value: 'jQuery', name: 'jQuery'}
     ],
-    price: 12345
+    price: 12345,
+    list_3: []
   },
   computed: {
     halfRadius: function() {
@@ -97,6 +98,12 @@ var app = new Vue({
       }).then(function(response) {
         this.list_2 = response.data.items
       }.bind(this))
+    },
+    list_3: function() {
+      console.log('通常:', this.$refs.list_3.offsetHeight)
+      this.$nextTick(function() {
+        console.log('nextTick:', this.$refs.list_3.offsetHeight)
+      })
     }
   },
   filters: {
