@@ -1,12 +1,17 @@
 var scroll = new SmoothScroll()
 
 Vue.component('my-component', {
-  template: '<p>{{ val }}! {{ name }}!</p>',
+  template: '<button v-on:click="handleClick">{{ val }}! {{ name }}!</button>',
   props: {
     'val': String,
     'name': {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    handleClick: function() {
+      this.$emit('childs-event')
     }
   }
 })
@@ -187,6 +192,9 @@ var app = new Vue({
     },
     methodsData: function() {
       return Math.random()
+    },
+    parentsMethod: function() {
+      alert('イベントをキャッチ！')
     }
   }
 })
