@@ -171,6 +171,12 @@
     <transition-group name="list" tag="ul">
       <li v-for="item in list2" v-bind:key="item.id">{{ item.id }} {{ item.name }}</li>
     </transition-group>
+    <button v-on:click="order=!order">切り替え</button>
+    <transition-group tag="ul" class="list">
+      <li v-for="item in sortedList" v-bind:key="item.id">
+        {{ item.name }} {{ item.price }}円
+      </li>
+    </transition-group>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>

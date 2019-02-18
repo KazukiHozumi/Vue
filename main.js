@@ -69,7 +69,13 @@ var app = new Vue({
     price: 12345,
     list_3: [],
     show_3: true,
-    count_2: 0
+    count_2: 0,
+    order: false,
+    list_4: [
+      { id: 1, name: 'りんご', price: 100 },
+      { id: 2, name: 'ばなな', price: 200 },
+      { id: 3, name: 'いちご', price: 300 }
+    ]
   },
   computed: {
     halfRadius: function() {
@@ -94,6 +100,9 @@ var app = new Vue({
     },
     computedData: function() {
       return Math.random()
+    },
+    sortedList: function() {
+      return _.orderBy(this.list_4, 'price', this.order ? 'desc' : 'asc')
     }
   },
   created: function() {
