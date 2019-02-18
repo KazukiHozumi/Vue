@@ -68,7 +68,8 @@ var app = new Vue({
     ],
     price: 12345,
     list_3: [],
-    show_3: true
+    show_3: true,
+    count_2: 0
   },
   computed: {
     halfRadius: function() {

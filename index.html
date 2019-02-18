@@ -154,7 +154,7 @@
       </option>
     </select>
     <div v-for="item in list_2">{{ item.full_name }}</div>
-    <p>{{ price | localeNum}}円</p>
+    <p>{{ price | localeNum }}円</p>
     <button v-on:click="list_3.push(list_3.length+1)">追加</button>
     <ul ref="list_3">
       <li v-for="item in list_3">{{ item }}</li>
@@ -164,6 +164,11 @@
       <div v-if="show_3" key="a">TRUE</div>
       <div v-else key="b">FALSE</div>
     </transition>
+    <button v-on:click="count_2++">カウントを増やす</button>
+    <transition name="tra_2">
+      <div v-bind:key="count_2">{{ count_2 }}</div>
+    </transition>
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>

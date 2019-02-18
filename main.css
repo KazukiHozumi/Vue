@@ -24,3 +24,14 @@ img.hide {
   font-size: 20px
 }
 
+.tra_2-enter-active, .tra_2-leave-active {
+  transition: opacity 1s;
+}
+
+.tra_2-leave-active {
+  position: absolute;
+}
+
+.tra_2-enter, .tra_2-leave-to {
+  opacity: 0;
+}
