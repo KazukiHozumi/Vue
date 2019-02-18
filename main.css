@@ -35,3 +35,7 @@ img.hide {
 .tra_2-enter, .tra_2-leave-to {
   opacity: 0;
 }
+
+.v-move {
+  transition: transform 1s;
+}

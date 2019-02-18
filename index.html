@@ -168,7 +168,9 @@
     <transition name="tra_2">
       <div v-bind:key="count_2">{{ count_2 }}</div>
     </transition>
-
+    <transition-group name="list" tag="ul">
+      <li v-for="item in list2" v-bind:key="item.id">{{ item.id }} {{ item.name }}</li>
+    </transition-group>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
