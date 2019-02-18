@@ -1,5 +1,10 @@
-.v-enter-active, .v-leave-active {
+.v-enter-active {
   transition: opacity 1s;
+}
+
+.v-leave-active {
+  transition: opacity 1s;
+  position: absolute;
 }
 
 .v-enter, .v-leave-to {
@@ -18,3 +23,4 @@ img.hide {
 .compact {
   font-size: 20px
 }
+

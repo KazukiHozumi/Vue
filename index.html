@@ -160,6 +160,10 @@
       <li v-for="item in list_3">{{ item }}</li>
     </ul>
     <my-component v-on:childs-event="parentsMethod" val="よろしく" name="Tarou"></my-component>
+    <transition mode="out-in">
+      <div v-if="show_3" key="a">TRUE</div>
+      <div v-else key="b">FALSE</div>
+    </transition>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>

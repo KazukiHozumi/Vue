@@ -67,7 +67,8 @@ var app = new Vue({
       {value: 'jQuery', name: 'jQuery'}
     ],
     price: 12345,
-    list_3: []
+    list_3: [],
+    show_3: true
   },
   computed: {
     halfRadius: function() {
