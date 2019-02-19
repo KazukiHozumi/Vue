@@ -1,5 +1,5 @@
-.v-enter-active {
-  transition: opacity 1s;
+.v-enter-active, .v-leave-active {
+  transition: all 1s;
 }
 
 .v-leave-active {
@@ -9,6 +9,7 @@
 
 .v-enter, .v-leave-to {
   opacity: 0;
+  transform: translatex(-20px);
 }
 
 img {
