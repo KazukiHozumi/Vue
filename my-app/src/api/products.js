@@ -14,6 +14,6 @@ export default {
   asyncFind(id, callback) {
     setTimeout(() => {
       callback(database.find(el => el.id === id))
-    }, 1000)
+    }, 100)
   }
 }

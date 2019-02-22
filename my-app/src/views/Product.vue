@@ -2,15 +2,15 @@
   <div class="product">
     <h1>{{ detail.name }}</h1>
     <nav class="nav">
-      <router-link :to="{ name: 'product-home' }">商品詳細</router-link>
-      <router-line :to="{ name: 'product-review' }">レビュー</router-line>
+      <router-link :to="{ name: 'product-home' }" tag="button">商品詳細</router-link>
+      <router-link :to="{ name: 'product-review' }" tag="button">レビュー</router-link>
     </nav>
     <router-view />
   </div>
 </template>
 
 <script>
-import { mapGetter } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
   props: { id: Number },
   computed: mapGetters('product', ['detail']),

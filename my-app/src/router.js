@@ -29,7 +29,7 @@ const router = new VueRouter({
           component: ProductHome
         },
         {
-          name: 'product-revier',
+          name: 'product-review',
           path: 'review',
           component: ProductReview
         },
